@@ -269,10 +269,46 @@
             <h4>Project Structure</h4>
             <p>Clean code organization with clear separation of concerns:</p>
             <ul class="list-unstyled">
-              <li>• Game logic modules</li>
-              <li>• Piece implementations</li>
-              <li>• Player strategies</li>
-              <li>• Comprehensive test suite</li>
+              <li>• Source Code Structure:
+                <pre class="bg-light p-3">
+          project/
+          ├── src/
+          │   ├── enums/
+          │   │   ├── color.py
+          │   │   └── game_status.py
+          │   ├── game/
+          │   │   ├── board.py
+          │   │   ├── game.py
+          │   │   ├── move.py
+          │   │   ├── position.py
+          │   │   └── square.py
+          │   ├── pieces/
+          │   │   ├── piece.py
+          │   │   ├── pawn.py
+          │   │   ├── rook.py
+          │   │   ├── knight.py
+          │   │   ├── bishop.py
+          │   │   ├── queen.py
+          │   │   └── king.py
+          │   └── players/
+          │       ├── player.py
+          │       ├── human_player.py
+          │       └── ai_player.py
+          ├── tests/
+          │   ├── test_move.py
+          │   ├── test_position.py
+          │   ├── test_square.py
+          │   └── ...
+          └── main.py</pre>
+              </li>
+              <li>• Module Organization:
+                <ul class="list-unstyled pl-4">
+                  <li>- Enums: Game constants and states</li>
+                  <li>- Game: Core game mechanics and state</li>
+                  <li>- Pieces: Chess piece behaviors</li>
+                  <li>- Players: Human and AI implementations</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
