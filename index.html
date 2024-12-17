@@ -117,31 +117,111 @@
           
           <div class="col-lg-6 mb-5" data-aos="fade-up">
             <h4>Chess Piece Movement System</h4>
-            <img src="images/piece-movement.png" alt="Piece Movement Diagram" class="img-fluid mb-4">
-            <p>Implementation highlights of the piece movement system:</p>
+            <img src="images/CleanShot 2024-12-17 at 15.40.17@2x.png" alt="Piece Movement Diagram" class="img-fluid mb-4">
+            <p>The piece movement system is built on abstract and concrete classes:</p>
             <ul class="list-unstyled">
-              <li>• Abstract Piece class defining common behavior</li>
-              <li>• Specialized movement patterns for each piece type:
+              <li>• Abstract Piece Class:
                 <ul class="list-unstyled pl-4">
-                  <li>- Queen: Combined rook and bishop movements</li>
-                  <li>- Knight: L-shaped movement with position validation</li>
-                  <li>- Pawn: Direction-based movement with special first move</li>
+                  <li>- Abstract method get_valid_moves(board): Returns list of valid positions</li>
+                  <li>- Concrete method move_to(position): Updates piece location</li>
+                  <li>- Position tracking with x,y coordinates</li>
+                  <li>- Movement history tracking (has_moved flag)</li>
+                </ul>
+              </li>
+              <li>• Concrete Piece Implementations:
+                <ul class="list-unstyled pl-4">
+                  <li>- Queen: Combines diagonal and straight movements</li>
+                  <li>- Rook: Implements straight-line movement in 4 directions</li>
+                  <li>- Bishop: Implements diagonal movement in 4 directions</li>
+                  <li>- Knight: L-shaped movement with 8 possible positions</li>
+                  <li>- King: Single-step movement in all 8 directions</li>
+                  <li>- Pawn: Direction-based movement with special first move and promotion</li>
                 </ul>
               </li>
             </ul>
           </div>
-
+        
           <div class="col-lg-6 mb-5" data-aos="fade-up">
             <h4>Board Management System</h4>
             <img src="images/CleanShot 2024-12-17 at 15.37.10@2x.png" alt="Board Management System" class="img-fluid mb-4">
-            <p>Key features of the board management system:</p>
+            <p>Core functionalities of the board system:</p>
             <ul class="list-unstyled">
-              <li>• 2D array representation with Square objects</li>
-              <li>• Efficient piece tracking and movement validation</li>
-              <li>• Position-based move execution and validation</li>
+              <li>• Board State Management:
+                <ul class="list-unstyled pl-4">
+                  <li>- get_piece_at(position): Retrieves piece at coordinates</li>
+                  <li>- get_pieces(color): Returns all pieces of specified color</li>
+                  <li>- find_kings_position(color): Locates king for given color</li>
+                </ul>
+              </li>
+              <li>• Move Processing:
+                <ul class="list-unstyled pl-4">
+                  <li>- determine_move_type(): Categorizes moves (capture, castle, etc.)</li>
+                  <li>- categorize_moves(): Organizes moves by piece and type</li>
+                  <li>- create_move_display(): Generates visual move representation</li>
+                </ul>
+              </li>
+              <li>• Display Features:
+                <ul class="list-unstyled pl-4">
+                  <li>- Unicode piece representation (♔♕♖♗♘♙)</li>
+                  <li>- Captured pieces tracking and display</li>
+                  <li>- Chess notation conversion (A1, B2, etc.)</li>
+                  <li>- Move numbering system for selection</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
+        
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-5">
+            <h3 class="section-title-sub" data-aos="fade-up">Movement and State Management</h3>
+          </div>
+        
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Move Class Implementation</h4>
+            <p>The Move class handles movement execution and validation:</p>
+            <ul class="list-unstyled">
+              <li>• Core Attributes:
+                <ul class="list-unstyled pl-4">
+                  <li>- from_position: Starting coordinates</li>
+                  <li>- to_position: Target coordinates</li>
+                  <li>- piece_moved: Reference to moving piece</li>
+                  <li>- piece_captured: Optional captured piece</li>
+                </ul>
+              </li>
+              <li>• Key Methods:
+                <ul class="list-unstyled pl-4">
+                  <li>- execute(): Performs the move on the board</li>
+                  <li>- undo(): Reverts the move for AI analysis</li>
+                  <li>- Equality comparison for move validation</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Game State Controller</h4>
+            <p>The Game class manages the overall game flow:</p>
+            <ul class="list-unstyled">
+              <li>• State Management:
+                <ul class="list-unstyled pl-4">
+                  <li>- play_turn(): Plays one round of the game and executes player moves</li>
+                  <li>- is_check(): Validates check conditions</li>
+                  <li>- is_checkmate(): Determines winning conditions</li>
+                  <li>- is_stalemate(): Identifies draw conditions</li>
+                </ul>
+              </li>
+              <li>• Player Control:
+                <ul class="list-unstyled pl-4">
+                  <li>- switch_turn(): Alternates between players</li>
+                  <li>- get_valid_moves(): Compiles available moves</li>
+                  <li>- Player type management (Human/AI)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
 
         <div class="row mb-5">
           <div class="col-12 text-center mb-5">
@@ -207,9 +287,6 @@
                 </a>
               </div>
               <div class="col-md-6">
-                <a href="#" class="btn btn-secondary btn-block mb-3">
-                  <span class="icon-book mr-2"></span>Documentation
-                </a>
               </div>
             </div>
           </div>
