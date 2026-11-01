@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>Henry Cooper - Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div class="site-wrap">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Henry Cooper</a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="#projects-section" class="nav-link">Projects</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="site-section cta-big-image border-bottom" id="about-section">
+      <div class="container" style="padding-top: 30px">
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <img src="images/CleanShot 2024-12-05 at 14.48.42@2x.png" alt="Image of you of something fun" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h2 class="h2 mb-4">About Me</h2>
+              <p>Computer Science and Mathematics Major at the <a href="https://www.sandiego.edu">University of San Diego</a></p>
+              <p>I'm passionate about software development, with a particular interest in artificial intelligence and algorithm design. My academic journey has focused on creating elegant solutions to complex problems, exemplified by my recent work on a chess engine implementation.</p>
+              <p>Surfer, Diver, Programmer</p>
+              <p>When I'm not coding, you can find me catching waves at local San Diego beaches, exploring the underwater world through diving, or contributing to open-source projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="site-section border-bottom" id="projects-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Featured Project: Chess Implementation</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <img src="images/terminal chess.png" alt="Chess Game Interface" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Python Chess Implementation</h3>
+              <p>I developed this chess game to explore complex object-oriented design principles and artificial intelligence concepts. Chess presents unique challenges in software design - while its rules are well-defined, creating a clean, maintainable implementation requires careful consideration of class hierarchies and game state management.</p>
+              <h4>Fundamental Requirements</h4>
+              <p>The game is a full implementation of chess featuring:</p>
+              <p>• Complete chess rule implementation including special moves</p>
+              <p>• Support for both human and AI players</p>
+              <p>• AI opponent using minimax algorithm with alpha-beta pruning</p>
+              <p>• Intuitive terminal-based interface with Unicode chess pieces</p>
+              <p>• Comprehensive move validation and game state management</p>
+              <p>• Visual display of possible moves with clear numbering system</p>
+              <p>• Tracking of captured pieces</p>
+              <p>• Check, checkmate, and stalemate detection</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-5">
+            <h3 class="section-title-sub" data-aos="fade-up">Technical Deep Dive</h3>
+          </div>
+          
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Chess Piece Movement System</h4>
+            <img src="images/CleanShot 2024-12-17 at 15.40.17@2x.png" alt="Piece Movement Diagram" class="img-fluid mb-4">
+            <p>The piece movement system is built on abstract and concrete classes:</p>
+            <ul class="list-unstyled">
+              <li>• Abstract Piece Class:
+                <ul class="list-unstyled pl-4">
+                  <li>- Abstract method get_valid_moves(board): Returns list of valid positions</li>
+                  <li>- Concrete method move_to(position): Updates piece location</li>
+                  <li>- Position tracking with x,y coordinates</li>
+                  <li>- Movement history tracking (has_moved flag)</li>
+                </ul>
+              </li>
+              <li>• Concrete Piece Implementations:
+                <ul class="list-unstyled pl-4">
+                  <li>- Queen: Combines diagonal and straight movements</li>
+                  <li>- Rook: Implements straight-line movement in 4 directions</li>
+                  <li>- Bishop: Implements diagonal movement in 4 directions</li>
+                  <li>- Knight: L-shaped movement with 8 possible positions</li>
+                  <li>- King: Single-step movement in all 8 directions</li>
+                  <li>- Pawn: Direction-based movement with special first move and promotion</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Board Management System</h4>
+            <img src="images/CleanShot 2024-12-17 at 15.37.10@2x.png" alt="Board Management System" class="img-fluid mb-4">
+            <p>Core functionalities of the board system:</p>
+            <ul class="list-unstyled">
+              <li>• Board State Management:
+                <ul class="list-unstyled pl-4">
+                  <li>- get_piece_at(position): Retrieves piece at coordinates</li>
+                  <li>- get_pieces(color): Returns all pieces of specified color</li>
+                  <li>- find_kings_position(color): Locates king for given color</li>
+                </ul>
+              </li>
+              <li>• Move Processing:
+                <ul class="list-unstyled pl-4">
+                  <li>- determine_move_type(): Categorizes moves (capture, castle, etc.)</li>
+                  <li>- categorize_moves(): Organizes moves by piece and type</li>
+                  <li>- create_move_display(): Generates visual move representation</li>
+                </ul>
+              </li>
+              <li>• Display Features:
+                <ul class="list-unstyled pl-4">
+                  <li>- Unicode piece representation (♔♕♖♗♘♙)</li>
+                  <li>- Captured pieces tracking and display</li>
+                  <li>- Chess notation conversion (A1, B2, etc.)</li>
+                  <li>- Move numbering system for selection</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-5">
+            <h3 class="section-title-sub" data-aos="fade-up">Movement and State Management</h3>
+          </div>
+        
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Move Class Implementation</h4>
+            <p>The Move class handles movement execution and validation:</p>
+            <ul class="list-unstyled">
+              <li>• Core Attributes:
+                <ul class="list-unstyled pl-4">
+                  <li>- from_position: Starting coordinates</li>
+                  <li>- to_position: Target coordinates</li>
+                  <li>- piece_moved: Reference to moving piece</li>
+                  <li>- piece_captured: Optional captured piece</li>
+                </ul>
+              </li>
+              <li>• Key Methods:
+                <ul class="list-unstyled pl-4">
+                  <li>- execute(): Performs the move on the board</li>
+                  <li>- undo(): Reverts the move for AI analysis</li>
+                  <li>- Equality comparison for move validation</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Game State Controller</h4>
+            <p>The Game class manages the overall game flow:</p>
+            <ul class="list-unstyled">
+              <li>• State Management:
+                <ul class="list-unstyled pl-4">
+                  <li>- play_turn(): Plays one round of the game and executes player moves</li>
+                  <li>- is_check(): Validates check conditions</li>
+                  <li>- is_checkmate(): Determines winning conditions</li>
+                  <li>- is_stalemate(): Identifies draw conditions</li>
+                </ul>
+              </li>
+              <li>• Player Control:
+                <ul class="list-unstyled pl-4">
+                  <li>- switch_turn(): Alternates between players</li>
+                  <li>- get_valid_moves(): Compiles available moves</li>
+                  <li>- Player type management (Human/AI)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-5">
+            <h3 class="section-title-sub" data-aos="fade-up">AI Implementation</h3>
+          </div>
+
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Minimax Algorithm with Alpha-Beta Pruning</h4>
+            <img src="images/CleanShot 2024-12-17 at 15.35.05@2x.png" alt="Minimax Decision Tree" class="img-fluid mb-4">
+            <p>AI decision-making process:</p>
+            <ul class="list-unstyled">
+              <li>• Advanced position evaluation system</li>
+              <li>• Depth-based move analysis</li>
+              <li>• Efficient pruning of suboptimal moves</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Game State Management</h4>
+            <img src="images/game state dyagram.png" alt="Game State Diagram" class="img-fluid mb-4">
+            <p>Comprehensive game state tracking:</p>
+            <ul class="list-unstyled">
+              <li>• Check detection</li>
+              <li>• Checkmate validation</li>
+              <li>• Stalemate detection</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-5">
+            <h3 class="section-title-sub" data-aos="fade-up">Development Process</h3>
+          </div>
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Testing Strategy</h4>
+            <img src="images/tests cov.png" alt="Test Coverage Report" class="img-fluid mb-4">
+            <p>Comprehensive testing approach:</p>
+            <ul class="list-unstyled">
+              <li>• Unit tests for all components</li>
+              <li>• Integration tests for game flow</li>
+              <li>• AI behavior validation</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
+            <h4>Project Structure</h4>
+            <p>Clean code organization with clear separation of concerns:</p>
+            <ul class="list-unstyled">
+              <li>• Source Code Structure:
+                <pre class="bg-light p-3">
+          project/
+          ├── src/
+          │   ├── enums/
+          │   │   ├── color.py
+          │   │   └── game_status.py
+          │   ├── game/
+          │   │   ├── board.py
+          │   │   ├── game.py
+          │   │   ├── move.py
+          │   │   ├── position.py
+          │   │   └── square.py
+          │   ├── pieces/
+          │   │   ├── piece.py
+          │   │   ├── pawn.py
+          │   │   ├── rook.py
+          │   │   ├── knight.py
+          │   │   ├── bishop.py
+          │   │   ├── queen.py
+          │   │   └── king.py
+          │   └── players/
+          │       ├── player.py
+          │       ├── human_player.py
+          │       └── ai_player.py
+          ├── tests/
+          │   ├── test_move.py
+          │   ├── test_position.py
+          │   ├── test_square.py
+          │   └── ...
+          └── main.py</pre>
+              </li>
+              <li>• Module Organization:
+                <ul class="list-unstyled pl-4">
+                  <li>- Enums: Game constants and states</li>
+                  <li>- Game: Core game mechanics and state</li>
+                  <li>- Pieces: Chess piece behaviors</li>
+                  <li>- Players: Human and AI implementations</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h4 class="mb-4">Project Resources</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="https://github.com/usd-comp-305/project-04-teamwinner-Cade-Monica-Henry" class="btn btn-primary btn-block mb-3">
+                  <span class="icon-github mr-2"></span>View Source Code
+                </a>
+              </div>
+              <div class="col-md-6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="contact-section" data-aos="fade">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Contact Me</h2>
+          </div>
+        </div>
+        <div class="row mb-5 text-center">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">
+              <span class="icon-mail_outline d-block h4 text-primary"></span>
+              <span>henryhcooper@gmail.com</span>
+            </p>
+          </div>
+          
+          <div class="col-md-12 text-center">
+            <p class="mb-0">
+              <span class="icon-graduation-cap d-block h4 text-primary"></span>
+              <a href="https://www.linkedin.com/in/henryhcooper/">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="col-md-12 text-center">
+          <p>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website builds on a template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/collapsable.js"></script>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>

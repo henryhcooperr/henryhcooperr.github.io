@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reef · Henry Cooper</title>
+<meta name="description" content="Case study: Reef, a native Mac editor for underwater footage with an agent that edits the same timeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="site.html#work" style="text-decoration:none;padding:12px 0;font-size:15px">← All work</a>
+    <span class="mono">CASE STUDY 01 / 04</span>
+  </div>
+</header>
+<main>
+<div class="wrap">
+  <div class="case-head">
+    <p class="eyebrow">REEF · NATIVE MAC EDITOR</p>
+    <h1>Find the moment. Build the cut. Keep shaping it.</h1>
+    <dl class="meta">
+      <div><dt>ROLE</dt><dd>Solo: design, app, engine</dd></div>
+      <div><dt>STACK</dt><dd>Swift, SwiftUI, Python, SQLite, GRDB, FFmpeg, MCP</dd></div>
+      <div><dt>STATUS</dt><dd>Active, source private</dd></div>
+      <div><dt>SHOWCASE</dt><dd><a href="https://github.com/henryhcooperr/reef">github.com/henryhcooperr/reef</a></dd></div>
+    </dl>
+  </div>
+  <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+    <img src="assets/reef.gif" alt="Reef's editor with an agent proposing a cut from dive footage" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px">
+    <figcaption class="mono">Concept walkthrough in the native interface, with a staged conversation. Not a live end-to-end recording.</figcaption>
+  </figure>
+  <div class="split">
+    <div><p class="eyebrow">THE PROBLEM</p></div>
+    <div>
+      <h2>A good moment underwater is a few seconds inside a much longer clip.</h2>
+      <p>Finding it is only the beginning. I wanted one place where search, the edit and an assistant all work on the same saved project, so a proposed edit becomes something I can inspect, change, save and reopen.</p>
+    </div>
+  </div>
+</div>
+<section class="deep">
+  <div class="wrap sec">
+    <div class="head"><div><p class="eyebrow">ENGINEERING DECISIONS</p><h2 style="font-size:36px">Four calls that shaped it</h2></div></div>
+    <div class="grid4 decisions">
+      <div><span>01</span><h3>Keep source ranges explicit</h3><p>Selected moments keep their source identity and timing through edits, so you can always inspect the real footage behind a choice.</p></div>
+      <div><span>02</span><h3>Protect newer edits</h3><p>Revision-aware operations reject stale writes when the project changed since a tool read it. The agent can't overwrite me.</p></div>
+      <div><span>03</span><h3>Separate source and timeline time</h3><p>Trims and speed changes move where words and media belong, so captions and audio follow a real mapping.</p></div>
+      <div><span>04</span><h3>Connect output to an edit</h3><p>Delivery records tie every render to the exact cut state it came from.</p></div>
+    </div>
+  </div>
+</section>
+<div class="wrap">
+  <div class="split">
+    <div><p class="eyebrow">WHERE IT'S GOING</p></div>
+    <div>
+      <h2>The goal stays the same: a proposed edit should be something a person can inspect, change, save and reopen.</h2>
+      <div class="row">
+        <a class="btn primary" href="https://github.com/henryhcooperr/reef">Showcase repo</a>
+        <a class="btn" href="site.html#work">Back to all work</a>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+</body>
+</html>

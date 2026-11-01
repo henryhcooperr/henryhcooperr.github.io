@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Henry Cooper · Creative tools engineer</title>
+<meta name="description" content="Henry Cooper builds creative tools from the interface down to the engine: Reef, Grade Lab, Social Lab and COOPR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">HENRY COOPER</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#engines">Engines</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="index.html?choose">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF7A2F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14"/><path d="M6 11l6 6 6-6"/></svg>
+        Take the dive</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">0 M · SURFACE</p>
+      <h1>I build creative tools, from the interface down to the engine.</h1>
+      <p class="lede">I film dives in California kelp, so I built a native Mac editor that finds the moments, a color lab that learns how I like water to look, and agents that work inside both.</p>
+      <ul class="chips">
+        <li>CS (ML) + Applied Math, University of San Diego</li>
+        <li>Graduating December 2026</li>
+        <li class="hot">Open to full-time SWE · remote or SF</li>
+      </ul>
+      <div class="row">
+        <a class="btn primary" href="resume.pdf">Resume</a>
+        <button class="btn copy-email" type="button">Copy email</button>
+        <a class="btn" href="https://github.com/henryhcooperr">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/henryhcooper/">LinkedIn</a>
+      </div>
+    </div>
+    <figure>
+      <img src="assets/hero.gif" alt="A Garibaldi in kelp. Left of the line is the GoPro's log footage, right is my grade from Grade Lab.">
+      <figcaption class="mono">Left of the line: what the GoPro recorded in log. Right: my grade from Grade Lab. Same frames, same Garibaldi.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section id="work" aria-labelledby="work-title">
+  <div class="wrap sec">
+    <div class="head">
+      <div>
+        <p class="eyebrow">−5 M · SELECTED WORK</p>
+        <h2 id="work-title">Four tools I use every week</h2>
+      </div>
+      <p>Source is private while I ship daily. Each one has a public showcase repo with demos and architecture.</p>
+    </div>
+
+    <article class="card feature">
+      <img src="assets/reef.gif" alt="Reef's native Mac editor finding moments in dive footage" loading="lazy">
+      <div>
+        <span class="mono">01 · NATIVE MAC EDITOR</span>
+        <h3>Reef</h3>
+        <p>The editor I cut my dives in. It finds the few seconds that matter inside hours of footage, and an agent edits the same timeline I do, without stomping on my changes.</p>
+        <dl class="facts">
+          <dt>Hard part</dt><dd>Revision-aware edits, so stale agent writes get rejected</dd>
+          <dt>Stack</dt><dd class="mono" style="color:var(--text)">Swift · SwiftUI · Python · SQLite · MCP</dd>
+        </dl>
+        <div class="links">
+          <a href="reef.html"><strong>Read the case study</strong></a>
+          <a href="https://github.com/henryhcooperr/reef">Showcase repo</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="grid3">
+      <article class="card">
+        <img class="media" src="assets/grade-lab.gif" alt="Grade Lab grading dive footage inside DaVinci Resolve" loading="lazy">
+        <span class="mono">02 · COLOR + AGENTS</span>
+        <h3>Grade Lab</h3>
+        <p>An agent grades my footage inside DaVinci Resolve on real nodes I can keep editing, through an MCP server I built.</p>
+        <span class="mono">Python · NumPy · Resolve · DCTL · MCP</span>
+        <a class="push" href="https://github.com/henryhcooperr/grade-lab">Showcase repo</a>
+      </article>
+      <article class="card">
+        <img class="media" src="assets/social-lab.gif" alt="Social Lab comparing post performance" loading="lazy">
+        <span class="mono">03 · ANALYTICS</span>
+        <h3>Social Lab</h3>
+        <p>Pulls references for a clip, then checks whether each post really outperformed for its creator, with uncertainty attached.</p>
+        <span class="mono">Python · robust stats · bootstrap · MCP</span>
+        <a class="push" href="https://github.com/henryhcooperr/reef-social-lab">Showcase repo</a>
+      </article>
+      <article class="card">
+        <img class="media" src="assets/coopr.gif" alt="COOPR turning a conversation into an editable document" loading="lazy">
+        <span class="mono">04 · CREATOR WORKSPACE</span>
+        <h3>COOPR</h3>
+        <p>The conversation turns into the document. Only what you accept lands in the plan: hook, script, shot list.</p>
+        <span class="mono">React · TypeScript · Python · PostgreSQL</span>
+        <a class="push" href="https://github.com/henryhcooperr/coopr">Showcase repo</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="engines" class="deep" aria-labelledby="engines-title">
+  <div class="wrap sec">
+    <div class="head"><div>
+      <p class="eyebrow">−18 M · INSIDE THE ENGINES</p>
+      <h2 id="engines-title">The algorithms underneath</h2>
+    </div><p>Small, runnable studies of the math each product rests on.</p></div>
+    <div class="grid4">
+      <a class="card" href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/moments.gif" alt="" loading="lazy"><strong>Finding the moment</strong><span>Subject, sharpness and motion signals become IN, PEAK and OUT.</span></a>
+      <a class="card" href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/restoring.gif" alt="" loading="lazy"><strong>Restoring color through water</strong><span>Depth-aware inversion, and the pink surface it taught me to fix.</span></a>
+      <a class="card" href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/learning.gif" alt="" loading="lazy"><strong>Learning my eye</strong><span>My feedback changes which past grade a new shot starts from.</span></a>
+      <a class="card" href="https://github.com/henryhcooperr/reef-algorithm-studies"><img src="assets/timeline.gif" alt="" loading="lazy"><strong>Sharing a timeline with an agent</strong><span>Undo the agent's trim, keep my speed change, catch conflicts.</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="skills" aria-labelledby="skills-title">
+  <div class="wrap sec">
+    <div class="head"><div>
+      <p class="eyebrow">−24 M · TOOLKIT</p>
+      <h2 id="skills-title">What I build with</h2>
+    </div></div>
+    <div class="skills">
+      <div><h3>LANGUAGES</h3><p>Swift, Python, TypeScript, SQL</p></div>
+      <div><h3>APPS + UI</h3><p>SwiftUI, React, native macOS</p></div>
+      <div><h3>ML + MATH</h3><p>PyTorch, NumPy, robust statistics, bootstrap, color science</p></div>
+      <div><h3>SYSTEMS + AGENTS</h3><p>MCP servers, SQLite / GRDB, PostgreSQL, FFmpeg, DaVinci Resolve</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap about">
+    <img src="assets/henry.jpg" alt="Henry Cooper in an orca hoodie" loading="lazy">
+    <div>
+      <p class="eyebrow">−30 M · ABOUT</p>
+      <h2 id="about-title" style="font-size:44px">Engineer first, diver always</h2>
+      <p>Most of what I build starts as a problem in my own life. I run Lensofcoop, an ocean channel out of San Diego, and every tool here exists because editing, grading or posting that footage was slower than it should be.</p>
+      <p>I like agent interfaces, and I like pushing what AI can do inside a real tool instead of beside it.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Building something for creators? Let's talk.</h2>
+    <div class="row">
+      <button class="btn primary copy-email" type="button">Copy email</button>
+      <a class="btn" href="resume.pdf">Resume</a>
+      <a class="btn" href="https://www.linkedin.com/in/henryhcooper/">LinkedIn</a>
+    </div>
+    <div class="base mono">
+      <span>San Diego · 32.85° N, 117.27° W</span>
+      <a href="index.html?choose">Switch to the 3D tour</a>
+    </div>
+  </div>
+</footer>
+<script>
+  // Put your email here.
+  var EMAIL = "you@example.com";
+  document.querySelectorAll(".copy-email").forEach(function (b) {
+    var label = b.textContent;
+    b.addEventListener("click", function () {
+      var done = function () { b.textContent = "Copied " + EMAIL; setTimeout(function () { b.textContent = label; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(EMAIL).then(done, function () { location.href = "mailto:" + EMAIL; });
+      else location.href = "mailto:" + EMAIL;
+    });
+  });
+</script>
+</body>
+</html>
